@@ -1,22 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+} */
+
+.boxShadow{
+    box-shadow: 0px 24px 48px -20px rgba(38, 53, 128, 0.1), 0px -4px 36px -4px rgba(38, 53, 128, 0.1);
+    border-radius: 20px;
+}
+.buttonShadow{
+    box-shadow: 0px 8px 32px -12px rgba(55, 80, 204, 0.6);;
+}
+.border{
+    border: 1;
+    border-radius: 8px;
+    background-color: #F2F4FC;
+    color: #B8BBCC;
+}
+.hr{
+    height: 5px;
+    border: 2px;
+    border: black;
+    background-color: black;
+}
+.inputBorder{
+    border: none;
+    border-radius: 8px;
+}
+#circle{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 2px;
+    border-color: #596080;
+}
+.headerBorder{
+    background: #FFFFFF;
+border-bottom: 1px solid #E6E9F2;
+border-radius: 0px 0px 16px 16px;
 }
 
 body {
+    font-family: poppins, sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +58,61 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+ background-color: #FFF;
 }
+
+#bg{
+    background-image: url('../../public//assets//SchoolBG.png');
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.bgDashboard{
+    background-image: url('../../public//assets//SchoolBG.png');
+    width: 100%;
+}
+
+.quiz:checked{
+    background-color: blue;
+}
+.quiz:active , .quiz:hover{
+    border: 1px ;
+    border-color: #B8BBCC;
+}
+.quiz:focus{
+    background-color: rgb(224, 228, 28);
+}
+.checkbox{
+    background-color: #596080;
+}
+.checkbox:checked{
+    background-color: green;
+}
+
+/* .quiz:focus {
+    outline: none;
+    border: 2px solid #36394D; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  }
+
+.quiz:focus p {
+    border-left: 2px solid #36394D; 
+  } */
+
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
